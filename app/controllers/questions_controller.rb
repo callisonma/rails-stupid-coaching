@@ -11,8 +11,8 @@ class QuestionsController < ApplicationController
   end
 
 def coach_answer_enhanced(query)
-  answer = coach_answer(query)
-  if answer != ""
+  @answer = coach_answer(query)
+  if @answer != ""
     if query.upcase == query
       "I can feel your motivation! #{answer}"
     else
